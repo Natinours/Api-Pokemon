@@ -57,7 +57,7 @@ type Carte struct {
 	Retreat int `json:"retreat"`
 }
 
-func main() {
+func CarteP() {
 	for i := 1; i <= 10; i++ {
 		for j := 1; j <= 150; j++ {
 			url := fmt.Sprintf("https://api.tcgdex.net/v2/en/cards/swsh%d-%d", i, j)
@@ -88,31 +88,31 @@ func main() {
 				return
 			}
 
-			fmt.Printf("Carte récupérée :\n")
-			fmt.Printf("Category : %s\n", decodeData.Category)
-			fmt.Printf("ID : %s\n", decodeData.ID)
-			fmt.Printf("Nom : %s\n", decodeData.Name)
-			fmt.Printf("Illustrateur : %s\n", decodeData.Illustrator)
-			fmt.Printf("Image : %s/high.webp\n", decodeData.Image)
-			fmt.Printf("Rareté : %s\n", decodeData.Rarity)
-			fmt.Printf("DexID : %v\n", decodeData.DexID)
-			fmt.Printf("HP : %d\n", decodeData.Hp)
-			fmt.Printf("Types : %v\n", decodeData.Types)
-			fmt.Printf("Stage : %s\n", decodeData.Stage)
-			fmt.Printf("Attaques :\n")
-			for _, attack := range decodeData.Attacks {
-				fmt.Printf("\tNom : %s\n", attack.Name)
-				fmt.Printf("\tCoût : %v\n", attack.Cost)
-				fmt.Printf("\tEffet : %s\n", attack.Effect)
-				fmt.Printf("\tDégâts : %s\n", attack.Damage.Value)
-			}
-			fmt.Printf("Faiblesses :\n")
-			for _, weakness := range decodeData.Weaknesses {
-				fmt.Printf("\tType : %s\n", weakness.Type)
-				fmt.Printf("\tValeur : %s\n", weakness.Value)
-			}
-			fmt.Printf("Retraite : %d\n", decodeData.Retreat)
-			fmt.Printf("\n")
+			// fmt.Printf("Carte récupérée :\n")
+			// fmt.Printf("Category : %s\n", decodeData.Category)
+			// fmt.Printf("ID : %s\n", decodeData.ID)
+			// fmt.Printf("Nom : %s\n", decodeData.Name)
+			// fmt.Printf("Illustrateur : %s\n", decodeData.Illustrator)
+			// fmt.Printf("Image : %s/high.webp\n", decodeData.Image)
+			// fmt.Printf("Rareté : %s\n", decodeData.Rarity)
+			// fmt.Printf("DexID : %v\n", decodeData.DexID)
+			// fmt.Printf("HP : %d\n", decodeData.Hp)
+			// fmt.Printf("Types : %v\n", decodeData.Types)
+			// fmt.Printf("Stage : %s\n", decodeData.Stage)
+			// fmt.Printf("Attaques :\n")
+			// for _, attack := range decodeData.Attacks {
+			// 	fmt.Printf("\tNom : %s\n", attack.Name)
+			// 	fmt.Printf("\tCoût : %v\n", attack.Cost)
+			// 	fmt.Printf("\tEffet : %s\n", attack.Effect)
+			// 	fmt.Printf("\tDégâts : %s\n", attack.Damage.Value)
+			// }
+			// fmt.Printf("Faiblesses :\n")
+			// for _, weakness := range decodeData.Weaknesses {
+			// 	fmt.Printf("\tType : %s\n", weakness.Type)
+			// 	fmt.Printf("\tValeur : %s\n", weakness.Value)
+			// }
+			// fmt.Printf("Retraite : %d\n", decodeData.Retreat)
+			// fmt.Printf("\n")
 		}
 	}
 }
